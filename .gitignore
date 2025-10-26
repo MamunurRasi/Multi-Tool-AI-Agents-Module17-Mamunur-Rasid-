@@ -1,0 +1,23 @@
+.env
+virtualenv/
+__pycache__/   
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+node_modules/
+dist/
+build/
+*.log
+coverage
+html
+cov/
+*.sqlite3
+*.db
+*.egg-info/
+
+# Ignore IDE specific files
+virtual
+credentials.json
+settings.json
+token.json

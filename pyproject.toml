@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crewai-local-app"
+version = "0.2.0"
+description = "A local CrewAI automation project integrating Gmail and OpenAI APIs."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Mamunur Rasid", email = "mamun@example.com" }
+]
+requires-python = ">=3.10"
+
+keywords = ["crewai", "openai", "gmail", "automation", "fastapi", "ai-agents"]
+
+dependencies = [
+    "crewai>=0.30.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.30.0",
+    # Google / Gmail API dependencies
+    "google-api-python-client>=2.100.0",
+    "google-auth>=2.25.0",
+    "google-auth-oauthlib>=1.2.0",
+    "google-auth-httplib2>=0.2.0",
+    # Utilities
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.0",
+    "ruff>=0.5.0",
+    "isort>=5.13.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+ignore = ["E501"]
